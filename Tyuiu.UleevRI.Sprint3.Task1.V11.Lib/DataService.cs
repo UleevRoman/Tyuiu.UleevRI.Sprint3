@@ -12,8 +12,12 @@ namespace Tyuiu.UleevRI.Sprint3.Task1.V11.Lib
         public double GetMultiplySeries(double value, int startValue, int stopValue)
         {
             double sum = 1;
-            int i;
-            for (i = startValue; i <= stopValue; i++) sum *= (Math.Pow(value, i) + 0.5);
+            int i = startValue;
+            while (i <= stopValue)
+            {
+                sum *= (Math.Pow(value, i) + 0.5);
+                i++;
+            }
             return Math.Round(sum, 3);
         }
     }
